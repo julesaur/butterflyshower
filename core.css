@@ -1,0 +1,223 @@
+/* Start https://www.cursors-4u.com */ * {cursor: url(https://cur.cursors-4u.net/cursors/cur-2/cur199.ani), url(https://cur.cursors-4u.net/cursors/cur-2/cur199.png), auto !important;} /* End https://www.cursors-4u.com */
+
+@font-face {
+  font-family: "inter";
+  src: url("fonts/inter.ttf"),
+    url("fonts/inter.ttf")
+      format("truetype");;
+}
+
+html {
+  background-image: url("images/pretty-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  font-family: "inter";
+}
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+
+
+}
+
+li {
+
+font-size: 3vmin;
+
+}
+
+ li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  text-decoration: none;
+}
+
+ li a:hover:not(.active) {
+  color: #111;
+}
+
+
+.left{
+  float: left;
+}
+
+.right{
+  float: right;
+}
+
+#gallery-resize{
+  left: 25px;
+  top: 25px;
+  right: auto;
+  width: 15%;
+}
+
+
+#about-resize{
+  left: 25px;
+  top: 25px;
+  right: auto;
+  width: 15%;
+}
+
+  @media screen and (max-width: 1000px) {
+#gallery-resize{
+  width: 30%;
+
+  }
+}
+
+ @media screen and (max-width: 1000px) {
+#about-resize{
+  width: 30%;
+
+  }
+}
+
+  @media screen and (max-width: 1000px) {
+img{
+  width: 100%;
+
+  }
+}
+
+
+.modalDialog {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        opacity:0;
+        pointer-events: none;
+    }
+
+    .modalDialog:target {
+        opacity:1;
+        pointer-events: auto;
+    }
+
+    .modalDialog > div {
+        width: 60%;
+        position: relative;
+        margin: 10% auto;
+        padding: 1em;
+        background: #ECEAEA;
+        border-style: solid;
+        border-color: #0D13AB;
+        border-bottom: #0D13AB;
+        border-left: #0D13AB;
+        border-right: #0D13AB;
+        border-width: 2em;
+        border-radius: 5px;
+
+    }
+
+    .close {
+        color: #FFFFFF;
+        background: #FF0000;
+        line-height: 25px;
+        position: absolute;
+        right: 4px;
+        top: -28px;
+        text-align: center;
+        width: 3%;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 2px;
+
+
+
+    }
+
+    .close:hover { 
+      color: rgba(250, 250, 250, 0.7);
+    }
+
+
+
+
+.scroll-div {
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+    overflow-y: scroll;
+
+
+}
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #CFCFCF; 
+  box-shadow: 0px 2px;
+   border: 0.5px solid;
+
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #B9B9B9; 
+}
+
+
+
+
+
+
+img{
+  max-width: 100%;
+}
+.container{
+  padding: 40px 0;
+}
+figure{
+  max-width: 800px;
+  margin: 0 auto 40px;
+
+}
+figure img{
+  max-width: 100%;
+  min-width: 100%;
+  display: block;
+}
+.imaging ul{
+  list-style: none;
+  margin: 0;
+  text-align: center;
+}
+.imaging ul li{
+  margin: 0 5px;
+  display: inline-block;
+  width: 100px;
+  cursor: pointer;
+}
+
+.imaging ul li img{
+  display: block;
+}
+
+
+
+
+
+
