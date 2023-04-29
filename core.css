@@ -218,6 +218,16 @@ figure img{
 
 
 
+.spacin{
+position: relative;
+    top: 15%;
+    margin-top: -30px;
+    font-size: 18px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
 
+}
 
 
