@@ -368,24 +368,23 @@ position: relative;
 }
 
 .playr-controls button::after {
-  font-family: "Material Design Icons";
   @include flex-center;
 }
 
 .playr-play::after {
-  content: "\f40a";
+  content: "⏵";
 }
 
 .playr.playing .playr-play::after {
-  content: "\f3e4";
+  content: "⏸";
 }
 
 .playr-fastforward::after {
-  content: "\f211";
+  content: "⏭";
 }
 
 .playr-rewind::after {
-  content: "\f45f";
+  content: "⏮";
 }
 
 .playr-rewind::after,
