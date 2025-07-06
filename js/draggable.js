@@ -1,6 +1,10 @@
 //Make the DIV element draggagle:
-dragElement(document.getElementById("gallery"));
-dragElement(document.getElementById("about"));
+dragElement(document.getElementById("gallerybrowser"));
+dragElement(document.getElementById("aboutbrowser"));
+dragElement(document.getElementById("modelbrowser"));
+dragElement(document.getElementById("conceptbrowser"));
+dragElement(document.getElementById("videobrowser"));
+
 
 function dragElement(elmnt) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
@@ -42,3 +46,62 @@ function dragElement(elmnt) {
     document.onmousemove = null;
   }
 }
+
+// -------------------close and open browsers-----------------------------------------
+
+function galleryOpen() {
+  document.getElementById("gallerybrowser").style.display = "block";
+}
+
+function galleryClose() {
+  document.getElementById("gallerybrowser").style.display = "none";
+}
+
+
+function aboutOpen() {
+  document.getElementById("aboutbrowser").style.display = "block";
+}
+
+function aboutClose() {
+  document.getElementById("aboutbrowser").style.display = "none";
+}
+
+
+function modelOpen() {
+  document.getElementById("modelbrowser").style.display = "block";
+}
+
+function modelClose() {
+  document.getElementById("modelbrowser").style.display = "none";
+}
+
+function conceptOpen() {
+  document.getElementById("conceptbrowser").style.display = "block";
+}
+
+function conceptClose() {
+  document.getElementById("conceptbrowser").style.display = "none";
+}
+
+function videoOpen() {
+  document.getElementById("videobrowser").style.display = "block";
+}
+
+function videoClose() {
+  document.getElementById("videobrowser").style.display = "none";
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <title>Butterfly Shower</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="icon" href="images/favicon.png" type="image/gif">
 <link rel="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"
@@ -8,77 +10,78 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <link rel="stylesheet" href="core.css" />
 <script type="text/javascript" src="js/time.js"></script>
+
+
+
 <body onload="renderTime()">
 
 
+<!--------------------bottom nav bar--------------->
+<div class="navbar">
+	<div class="nav-left">
 
-      <!---------------------music------------------------>
-	<audio id="player" loop src="late-night.mp3" controls></audio>
+<div class="dropdown">
+  <img src="images/clover.png" id="icon-resize">
 
-<ul>
-  <li class="left"><a href="https://newart.city/show/butterfly-shower">Return</a></li>
-  <li class="right"><a href="#"><div id="clockDisplay"></div></a></li>
-</ul>
-
-
-
-  <div class="item">
-    <div class="polaroid"><a href="https://julesaur.com/about.html"><img src="images/IMG_3580.jpg"></a>
-      <div class="caption">Meet the Artist</div>
-    </div>
+  <div class="dropdown-content">
+    <a href="https://julesaur.com/about.html" target="_blank">Meet Artist</a>
+    <a href="https://newart.city/show/butterfly-shower" target="_blank">Virtual World</a>
+  </div>
 </div>
 
-<a href="#gallery"><img src="images/gallery.png" id="gallery-resize"alt="file01"></a>
 
+  <a onclick="modelOpen()">3D Model</a>
+  <a onclick="conceptOpen()">Concept</a>
+  <a onclick="videoOpen()">Video Art</a>
+</div>
+	
+	<div class="no-link">
+  <a href="#"><div id="clockDisplay"></div></a>
+  <audio id="song" src="late-night.mp3" loop preload="auto"></audio>
+  <a href="#" onclick="togglePlay()"><i class="fa fa-play-circle-o" id="musicplayer"></i></a>
+</div>
+
+</div>
+ 
+
+
+
+
+
+<!--------------------desktop icons---------------------------------------->
+<a onclick="aboutOpen()" href="#about"><img src="images/about.png" class="resize"></a>
 </br>
-<a href="#about"><img src="images/about.png" id="about-resize" alt="file02"></a>
+<a onclick="galleryOpen()"><img src="images/gallery.png" class="resize"></a>
 
 
+<!--------------------notes--------------->
+<div class="note-center">
+	<form>
+  <textarea class="note-center">
+  Notes 2025 07/05
 
+• Redesign layout for Butterfly Shower website
+• Create better music player
+• New Background Image
+• Windows Footer (hover logo to view options)
+• Use Butterfly as Favicon
 
-
-<div id="gallery" class="modalDialog">
-<div>
-
-<div class="scroll-div">
-    <a href="#close" title="Close" class="close">X</a>
-
-
-
-<div class="imaging">
-<div class="container">
-	<figure>
-		<img id="mainImg" src="images/IMG_0049.jpg">
-	</figure>
-
-	<ul>
-		<li><img id="thumb1" src="images/IMG_0048.jpg"></li>
-		<li><img id="thumb2" src="images/IMG_0056.jpg"></li>
-		<li><img id="thumb3" src="images/IMG_0057.jpg"></li>
-		<li><img id="thumb4" src="images/IMG_0054.jpg"></li>
-	</ul>
-
-
-
-
+</textarea>
+</form>
 
 </div>
 
-</div>
+<!-----------------------------about---------------------------------------->
 
-</div>
-</div>
-</div>
-</div>
-<!--------------------------------------------------------------------->
+<div class="browser-center">
+	
+<div id="aboutbrowser" style="display:none;">
+  <div id="browserheader">About</div>
+  <a href="#" onclick="aboutClose()" title="Close" class="close">X</a>
 
-  <div id="about" class="modalDialog">
-<div>
-	<div class="scroll-div">
-    <a href="#close" title="Close" class="close">X</a>
-    <div class="spacin">
-    <h2>Butterfly Shower</h2>
-    <p>I follow the sight of small, rapid wings leading me to a mysterious, yet enchanting place. My ears perked up when I heard someone showering?!? After a long debate, I decided what the heck and saw what was going on. To my surprise, before me was an easel stand holding a mandala-shaped round frame that resembled a shower head. Around the objects are colorful butterflies swarming around, acting like raindrops falling from the sky. I just entered the Butterfly Shower and let my problems go away.
+<div class="about-content">
+<h2>Butterfly Shower</h2>
+<p>I follow the sight of small, rapid wings leading me to a mysterious, yet enchanting place. My ears perked up when I heard someone showering?!? After a long debate, I decided what the heck and saw what was going on. To my surprise, before me was an easel stand holding a mandala-shaped round frame that resembled a shower head. Around the objects are colorful butterflies swarming around, acting like raindrops falling from the sky. I just entered the Butterfly Shower and let my problems go away.
 
 <br><br>
 Butterfly Shower is an abstract shower that showcases the vitality of recharging from harsh reality. I am inspired by the cottage-core aesthetic, so I wanted to emphasize simplicity and soft peacefulness. This is a mixed-media project that handles both craftsmanship and digital because it crosses paths between nature and technology. The installation showcases an easel stand that holds a round frame with iridescent butterflies. The butterflies represent beauty, fragility, and change, encouraging us to open our hearts and minds. The digital aspect of this piece is a video projection of water caustics that flows seamlessly onto the tulle fabric. Finally, the sound of running water serves the purpose of clearing your overflowing mind.
@@ -86,34 +89,162 @@ Butterfly Shower is an abstract shower that showcases the vitality of recharging
 <br><br>
 Vulnerability doesn’t always mean you are weak. It takes time to heal from harsh environments or high expectations. So, if you are going through tough times, don’t be afraid to enter the Butterfly Shower.
 
-
-
 </p>
-
-<br>
-
-<h2>Initial Idea</h2>
-
-<img id="thumb1" src="images/rough-sketch.jpg">
+</div>
 
 
+</div>
+
+
+</div>
+
+<!---------------------------------------gallery-------------------------------->
+
+
+<div class="browser-center">
+	
+<div id="gallerybrowser" style="display:none;">
+  <div id="browserheader">Gallery</div>
+  <a href="#" onclick="galleryClose()" title="Close" class="close">X</a>
+
+<div class="tab">
+
+  <button class="tablinks" onclick="openCity(event, 'butterfly_1')" id="defaultOpen">
+  <img id="thumb1" src="images/IMG_0049.jpg">
+</button>
+
+  <button class="tablinks" onclick="openCity(event, 'butterfly_2')">
+  <img id="thumb2" src="images/IMG_0048.jpg">
+</button>
+
+  <button class="tablinks" onclick="openCity(event, 'butterfly_3')">
+  <img id="thumb3" src="images/IMG_0056.jpg">
+</button>
+
+  <button class="tablinks" onclick="openCity(event, 'butterfly_4')">
+  <img id="thumb3" src="images/IMG_0054.jpg">
+</button>
+
+  <button class="tablinks" onclick="openCity(event, 'butterfly_5')">
+  <img id="thumb3" src="images/IMG_0057.jpg">
+</button>
+
+</div>
+
+<div id="butterfly_1" class="tabcontent">
+  <img id="thumb1" src="images/IMG_0049.jpg">
+</div>
+
+<div id="butterfly_2" class="tabcontent">
+  <img id="thumb2" src="images/IMG_0048.jpg">
+</div>
+
+<div id="butterfly_3" class="tabcontent">
+  <img id="thumb3" src="images/IMG_0056.jpg">
+</div>
+
+<div id="butterfly_4" class="tabcontent">
+  <img id="thumb3" src="images/IMG_0054.jpg">
+</div>
+
+<div id="butterfly_5" class="tabcontent">
+  <img id="thumb3" src="images/IMG_0057.jpg">
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+<!----------------------------3D Model------------------------------------------->
+
+<div class="browser-center">
+	
+<div id="modelbrowser" style="display:none;">
+  <div id="browserheader">3D Model</div>
+  <a href="#" onclick="modelClose()" title="Close" class="close">X</a>
+
+<div class="model-content">
 <h2>3D Model version</h2>
 
 	<div class="sketchfab-embed-wrapper"> <iframe title="Butterfly Shower" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="100%" height="480" 
 
 	 src="https://sketchfab.com/models/09995259aaa64c2bb3459314256b8949/embed"> </iframe> 
 
-<h2>Video Art</h2>
-<div style="padding:75% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/822236294?h=9e61a65cd2&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="ss_soft"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 
 </div>
-</div>
+
 
 </div>
+
+
+</div>
+
+
+<!----------------------------concept------------------------------------------->
+
+
+<div class="browser-center">
+	
+<div id="conceptbrowser" style="display:none;">
+  <div id="browserheader">Concept</div>
+  <a href="#" onclick="conceptClose()" title="Close" class="close">X</a>
+
+<div class="concept-content">
+
+
+<h2>Initial Idea</h2>
+<img id="thumb1" src="images/first-pg.jpg">
+<img id="thumb1" src="images/second-pg.jpg">
+<img id="thumb1" src="images/third-pg.jpg">
+<img id="thumb1" src="images/fourth-pg.jpg">
+<img id="thumb1" src="images/fifth-pg.jpg">
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+<!----------------------------video art------------------------------------------->
+
+
+<div class="browser-center">
+	
+<div id="videobrowser" style="display:none;">
+  <div id="browserheader">Video Art</div>
+  <a href="#" onclick="videoClose()" title="Close" class="close">X</a>
+
+<div class="video-content">
+
+<h2>Caustics Flow</h2>
+<div style="padding:75% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/822236294?h=9e61a65cd2&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="ss_soft"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>   
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
 
 
 <script src="js/slider.js"></script>
 <script src="js/player.js"></script>
+<script src="js/draggable.js"></script>
 
 
 </body>

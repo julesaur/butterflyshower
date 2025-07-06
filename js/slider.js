@@ -1,21 +1,16 @@
-var thumb1 =  document.getElementById("thumb1");
-var thumb1Src =  document.getElementById("thumb1").src;
-var thumb2 =  document.getElementById("thumb2");
-var thumb2Src =  document.getElementById("thumb2").src;
-var thumb3 =  document.getElementById("thumb3");
-var thumb3Src =  document.getElementById("thumb3").src;
-var thumb4 =  document.getElementById("thumb4");
-var thumb4Src =  document.getElementById("thumb4").src;
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
 
-thumb1.addEventListener("click",function(){
-	document.getElementById("mainImg").src = thumb1Src
-})
-thumb2.addEventListener("click",function(){
-	document.getElementById("mainImg").src = thumb2Src
-})
-thumb3.addEventListener("click",function(){
-	document.getElementById("mainImg").src = thumb3Src
-})
-thumb4.addEventListener("click",function(){
-	document.getElementById("mainImg").src = thumb4Src
-})
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
